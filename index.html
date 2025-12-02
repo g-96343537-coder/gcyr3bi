@@ -23,7 +23,9 @@
 body {
   font-family: 'Poppins', sans-serif; /* Modern, readable font */
   font-size: 19px; /* Slightly larger for clarity */
-  background: linear-gradient(to right top, #a6c0fe, #f68084); /* Soft, inviting gradient */
+  /* Updated background to include image */
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.hdqwalls.com/wallpapers/red-panda-cute-25.jpg') no-repeat center center fixed;
+  background-size: cover; /* Cover the entire background */
   min-height: 100vh;
   padding: 20px;
   color: var(--text-dark);
@@ -206,36 +208,51 @@ h1 {
 #nextBtn {
     font-size: 1.5rem; padding: 16px 40px;
     background: var(--secondary-color); color: white;
-    border: none; border-radius: 40px;
+    border: none;
+    border-radius: 40px;
     cursor: pointer;
     box-shadow: 0 7px 0 #8f1e3a; /* Darker red 3D effect */
-    font-weight: bold; font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
     transition: transform 0.1s, background-color 0.2s;
 }
 #nextBtn:hover {
     background-color: #cc3366; /* Slightly lighter red on hover */
 }
 #nextBtn:active {
-    transform: translateY(5px); box-shadow: 0 2px 0 #8f1e3a;
+    transform: translateY(5px);
+    box-shadow: 0 2px 0 #8f1e3a;
 }
 #nextBtn:disabled {
-    background: #cccccc; box-shadow: none; cursor: not-allowed; color: #eeeeee;
+    background: #cccccc;
+    box-shadow: none;
+    cursor: not-allowed;
+    color: #eeeeee;
     transform: none;
 }
 
 .score {
-    font-size: 2rem; margin-top: 25px; font-weight: 900;
+    font-size: 2rem;
+    margin-top: 25px;
+    font-weight: 900;
     color: var(--accent-gold);
     text-shadow: 2px 2px 0 #cc9900;
 }
 
 /* Final Results Styling */
 .final-score-big {
-    font-size: 5rem; margin: 30px 0; color: var(--success-green);
-    font-weight: 900; text-shadow: 4px 4px 0 #b3e6b3;
+    font-size: 5rem;
+    margin: 30px 0;
+    color: var(--success-green);
+    font-weight: 900;
+    text-shadow: 4px 4px 0 #b3e6b3;
 }
 .result-box {
-    padding: 25px; border-radius: 20px; font-size: 1.3rem; margin: 25px auto; max-width: 85%;
+    padding: 25px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    margin: 25px auto;
+    max-width: 85%;
 }
 .result-success { background:#e6ffe6; border: 3px solid var(--success-green); color: var(--success-green); }
 .result-error { background:#ffeded; border: 3px solid var(--error-red); color: var(--error-red); }
@@ -252,12 +269,11 @@ h1 {
           <label for="student-class">Step 1: Choose Your Class</label>
           <select id="student-class">
               <option value="">-- Select Class --</option>
-              <option value="3A">3A</option>
+              <option value="3M">3M</option>
+              <option value="3K">3K</option>
               <option value="3B">3B</option>
-              <option value="3C">3C</option>
-              <option value="3D">3D</option>
-              <option value="3E">3E</option>
-              <option value="3F">3F</option>
+              <option value="3H">3H</option>
+              <option value="3J">3J</option>
           </select>
       </div>
 
@@ -298,7 +314,7 @@ h1 {
 </div>
 
 <script>
-// ====== Google Apps Script URL (Unchanged) ======
+// ====== Google Apps Script URL (Updated to your provided URL) ======
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzvNHuCyyeHNAZYzwFfMfbc7q71_WtRqryRcIHvPF8Li-6wnTctp1H9gFwMyeo7M0Fk6A/exec";
 
 // ====== Question Data (New questions for Year 3, 3 options each) ======
